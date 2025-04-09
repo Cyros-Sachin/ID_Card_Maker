@@ -21,13 +21,13 @@ Try it out on Replit or deploy to Vercel, Netlify, or any static host!
 ## 📸 Screenshots
 
 ### 📝 Elegant Form Input
-![Form Input](./form-preview.png)
+![Form Input](./public/form-preview.png)
 
 ### 🪪 ID Cards with QR Integration
-![ID Cards](./idcard-templates.png)
+![ID Cards](./public/idcard-templates.png)
 
 ### 💾 Load & Preview Saved Cards
-![Saved Cards](./saved-cards.png)
+![Saved Cards](./public/saved-cards.png)
 
 ## 🧠 Thought Process
 
