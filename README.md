@@ -20,9 +20,14 @@ Try it out on Replit or deploy to Vercel, Netlify, or any static host!
 
 ## 📸 Screenshots
 
-- Elegant Form Input with Tailwind styling  
-- Beautifully styled ID Cards with QR integration  
-- Load & Preview previously saved cards  
+### 📝 Elegant Form Input
+![Form Input](./form-preview.png)
+
+### 🪪 ID Cards with QR Integration
+![ID Cards](./idcard-templates.png)
+
+### 💾 Load & Preview Saved Cards
+![Saved Cards](./saved-cards.png)
 
 ## 🧠 Thought Process
 
@@ -111,4 +116,4 @@ npm run dev
 
 **Kumar Sachin**  
 Frontend Developer | Passionate UI/UX Designer | IoT & Web Enthusiast  
-🔗 [LinkedIn](#) | ✉️ kumarsachin@example.com
+🔗 [LinkedIn](https://www.linkedin.com/in/cyrossachin/) | ✉️ sachinkc4456@gmail.com
