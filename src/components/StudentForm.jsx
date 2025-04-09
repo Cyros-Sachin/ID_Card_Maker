@@ -44,33 +44,98 @@ export default function StudentForm({ onSubmit }) {
   };
 
   return (
-    <form className="bg-white p-4 rounded shadow" onSubmit={handleSubmit}>
-      <h2 className="text-xl font-semibold mb-2">Student Details</h2>
-      <input name="name" value={form.name} onChange={handleChange} placeholder="Name" className="input" required />
-      <input name="rollNumber" value={form.rollNumber} onChange={handleChange} placeholder="Roll Number" className="input" required />
-      <select name="classDivision" value={form.classDivision} onChange={handleChange} className="input" required>
+    <form
+      onSubmit={handleSubmit}
+      className="bg-white shadow-lg rounded-lg p-6 space-y-4 w-full max-w-md"
+    >
+      <h2 className="text-2xl font-bold text-indigo-700 mb-2 text-center">📋 Student Details</h2>
+
+      <input
+        name="name"
+        value={form.name}
+        onChange={handleChange}
+        placeholder="Full Name"
+        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        required
+      />
+
+      <input
+        name="rollNumber"
+        value={form.rollNumber}
+        onChange={handleChange}
+        placeholder="Roll Number"
+        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        required
+      />
+
+      <select
+        name="classDivision"
+        value={form.classDivision}
+        onChange={handleChange}
+        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        required
+      >
         <option value="">Select Class & Division</option>
-        {classOptions.map((c) => <option key={c}>{c}</option>)}
+        {classOptions.map((c) => (
+          <option key={c} value={c}>{c}</option>
+        ))}
       </select>
 
-      <div className="mb-2">
-        <label className="block mb-1">Allergies:</label>
-        {allergyOptions.map((a) => (
-          <label key={a} className="block">
-            <input type="checkbox" value={a} checked={form.allergies.includes(a)} onChange={handleAllergyChange} />
-            {a}
-          </label>
-        ))}
+      <div>
+        <label className="block mb-1 font-medium">Allergies:</label>
+        <div className="grid grid-cols-2 gap-2">
+          {allergyOptions.map((a) => (
+            <label key={a} className="flex items-center space-x-2 text-sm">
+              <input
+                type="checkbox"
+                value={a}
+                checked={form.allergies.includes(a)}
+                onChange={handleAllergyChange}
+                className="form-checkbox h-4 w-4 text-indigo-600"
+              />
+              <span>{a}</span>
+            </label>
+          ))}
+        </div>
       </div>
 
-      <input type="file" name="photo" onChange={handleChange} className="mb-2" accept="image/*" required />
-      <input name="rackNumber" value={form.rackNumber} onChange={handleChange} placeholder="Rack Number" className="input" required />
-      <select name="busRoute" value={form.busRoute} onChange={handleChange} className="input" required>
+      <input
+        type="file"
+        name="photo"
+        onChange={handleChange}
+        className="block w-full text-sm text-gray-600 bg-white border border-gray-300 rounded p-1 file:mr-4 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-100 file:text-indigo-700 hover:file:bg-indigo-200"
+        accept="image/*"
+        required
+      />
+
+      <input
+        name="rackNumber"
+        value={form.rackNumber}
+        onChange={handleChange}
+        placeholder="Rack Number"
+        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        required
+      />
+
+      <select
+        name="busRoute"
+        value={form.busRoute}
+        onChange={handleChange}
+        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        required
+      >
         <option value="">Select Bus Route</option>
-        {busRoutes.map((r) => <option key={r}>{r}</option>)}
+        {busRoutes.map((r) => (
+          <option key={r} value={r}>{r}</option>
+        ))}
       </select>
 
-      <button type="submit" className="bg-blue-600 text-white py-1 px-4 mt-2 rounded">Submit</button>
+      <button
+        type="submit"
+        className="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition duration-200 font-semibold"
+      >
+        ➕ Submit
+      </button>
     </form>
   );
 }
